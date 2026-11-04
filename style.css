@@ -1,0 +1,87 @@
+/* Custom styles and clinical enhancements for PharmaGuard */
+
+@keyframes pulseGentle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.88; }
+}
+
+.animate-pulse-gentle {
+  animation: pulseGentle 2.5s infinite ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+.animate-shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+/* Tab active / inactive */
+.active-tab {
+  background-color: #1e293b;
+  color: #38bdf8;
+  border-bottom: 2px solid #38bdf8;
+}
+
+.inactive-tab {
+  color: #94a3b8;
+}
+
+.inactive-tab:hover {
+  color: #f1f5f9;
+  background-color: rgba(30, 41, 59, 0.5);
+}
+
+/* Filter pills */
+.filter-pill {
+  padding: 0.35rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid #e2e8f0;
+  background-color: #ffffff;
+  color: #475569;
+  transition: all 0.15s ease-in-out;
+}
+
+.filter-pill:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.filter-pill.active-pill {
+  background-color: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 1px 3px 0 rgba(37, 99, 235, 0.3);
+}
+
+/* Custom scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Live countdown badge pulse */
+.badge-expired-pulse {
+  box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.7);
+  animation: pulse-ring 2s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(225, 29, 72, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(225, 29, 72, 0);
+  }
+}
